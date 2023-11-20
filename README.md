@@ -6,8 +6,39 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-A simple library to decrypt PrivateBin pastes
+A simple library to decrypt PrivateBin pastes for nodejs
 
+## Install
+
+```bash
+npm install privatebin-decrypt
+```
+
+## Usage
+
+```ts
+import { decryptPrivateBin } from 'privatebin-decrypt'
+
+// https://paste.to/?2f1ecdd195e92055#3evZwExja1XBjXY6gCPkpmodFy6LKNLre75VHCY9sz5f
+const data = await (await fetch('https://paste.to/?2f1ecdd195e92055', {
+  headers: {
+    Accept: 'application/json, text/javascript, */*; q=0.01',
+  },
+})).json() as {
+  ct: string
+  adata: (string | number | (string | number)[])[]
+}
+
+const key = '3evZwExja1XBjXY6gCPkpmodFy6LKNLre75VHCY9sz5f'
+const decrypted = await decryptPrivateBin({
+  key,
+  data: data.adata,
+  cipherMessage: data.ct,
+})
+
+console.log(decrypted)
+// Hello PrivateBin
+```
 
 
 ## License
