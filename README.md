@@ -23,7 +23,7 @@ A simple library to decrypt PrivateBin pastes
 [npm-downloads-href]: https://npmjs.com/package/privatebin-decrypt
 [bundle-src]: https://img.shields.io/bundlephobia/minzip/privatebin-decrypt?style=flat&colorA=080f12&colorB=1fa669&label=minzip
 [bundle-href]: https://bundlephobia.com/result?p=privatebin-decrypt
-[license-src]: https://img.shields.io/github/license/antfu/privatebin-decrypt.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/privatebin-decrypt/blob/main/LICENSE
+[license-src]: https://img.shields.io/github/license/eliasblume/privatebin-decrypt.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/eliasblume/privatebin-decrypt/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
 [jsdocs-href]: https://www.jsdocs.io/package/privatebin-decrypt
