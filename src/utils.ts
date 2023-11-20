@@ -1,6 +1,6 @@
 import * as crypto from 'node:crypto'
 import zlib from 'node:zlib'
-import * as bs58 from 'bs58'
+import { base58 } from '@scure/base'
 
 export type TSpec = [
   // initialization vector
@@ -50,7 +50,7 @@ export function utf8To16(message: string) {
 
 export const base58decode = function (input: string) {
   return arraybufferToString(
-    bs58.decode(input),
+    base58.decode(input),
   )
 }
 
